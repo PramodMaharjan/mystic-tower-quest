@@ -77,6 +77,7 @@ const App = () => {
 	};
 
 	const handleClick = (box, rowIndex, colIndex) => {
+		console.log("🚀 ~ handleClick ~ rowIndex:", rowIndex)
 		if (rowIndex !== boxes.length - 1 - floor || gameOver) {
 			return;
 		}
@@ -177,7 +178,7 @@ const App = () => {
 				</div>
 			</div>
 			<div className={`game-board ${gameActivated ? "" : "disabled"}`}>
-				{boxes.reverse().map((floorBoxes, floorIndex) => (
+				{boxes.map((floorBoxes, floorIndex) => (
 					<div key={floorIndex}>
 						{floorBoxes.map((box, boxIndex) => (
 							<Box
