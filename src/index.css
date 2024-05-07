@@ -1,0 +1,189 @@
+body {
+	font-family: "Roboto Condensed", sans-serif;
+	background-color: #f8f9fa;
+}
+
+.app {
+	text-align: center;
+	margin-inline: auto;
+	width: 90%;
+}
+
+h1 {
+	font-size: 36px;
+	font-weight: bold;
+	color: #4caf50;
+	text-align: center;
+	margin-bottom: 6px;
+}
+
+h4 {
+	font-size: 22px;
+	text-align: center;
+	margin: 0;
+}
+
+button {
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	padding: 8px 12px;
+	font-size: 14px;
+	border-radius: 5px;
+	cursor: pointer;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+button:disabled {
+	background-color: #cccccc;
+	cursor: not-allowed;
+}
+
+.game-over {
+	color: tomato;
+}
+
+.winner {
+	color: #4caf50;
+}
+
+.game-controls {
+	display: flex;
+	gap: 150px;
+	justify-content: center;
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.game-activate {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.game-balance {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	justify-content: center;
+}
+
+.controls label {
+	margin-right: 10px;
+	color: #333;
+}
+
+.controls select {
+	padding: 4px 6px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background-color: #fff;
+	color: #333;
+	outline: none;
+	cursor: pointer;
+	font-family: "Roboto Condensed", sans-serif;
+}
+
+.controls select:hover {
+	border-color: #999;
+}
+
+.controls select:focus {
+	border-color: #007bff;
+}
+
+.controls select option {
+	padding: 6px 6px;
+}
+
+.floor {
+	font-weight: bold;
+	color: #333;
+}
+
+.player-balance {
+	font-weight: bold;
+	color: #007bff;
+}
+
+.auto-play-controls {
+	display: flex;
+	gap: 6px;
+	align-items: center;
+	justify-content: center;
+	color: #333;
+}
+
+.auto-play-controls label {
+	margin-right: 4px;
+}
+
+.auto-play-controls input[type="checkbox"] {
+	cursor: pointer;
+}
+
+.auto-play-controls input[type="number"] {
+	width: 50px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.game-container {
+	display: flex;
+}
+
+.game-board.disabled {
+	pointer-events: none;
+}
+
+.game-board .box:hover {
+	background-color: #ccc;
+}
+
+.box {
+	width: 45px;
+	height: 45px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 24px;
+	line-height: 50px;
+	background-color: #f0f0f0;
+	transition: background-color 0.3s ease-in-out;
+}
+
+.box.unrevealed {
+	background-color: #f0f0f0;
+}
+
+.box.revealed {
+	animation: reveal 0.5s ease-in-out;
+}
+
+.box.active-floor {
+	background-color: #b3e0ff;
+}
+
+.gem {
+	background-color: #bada55;
+}
+
+.bomb {
+	background-color: tomato;
+}
+
+@keyframes reveal {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
