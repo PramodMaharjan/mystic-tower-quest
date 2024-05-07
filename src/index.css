@@ -139,10 +139,6 @@ button:disabled {
 	pointer-events: none;
 }
 
-.game-board .box:hover {
-	background-color: #ccc;
-}
-
 .box {
 	width: 45px;
 	height: 45px;
